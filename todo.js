@@ -67,13 +67,13 @@ function Update() {
         p2.innerText=v;
         p2.ondblclick=function(){
             let input=document.createElement("input");
-            input.style=`width:500px;`
+            input.style=`width:500px;`;
             input.value=p2.innerText;
             p2.innerText="";
             p2.appendChild(input);
             input.focus();
             input.onblur=function(){
-                arr2.splice(index,1,input.value)
+                arr2.splice(i,1,this.value);
                 Update();
             }
         }
